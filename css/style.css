@@ -62,6 +62,22 @@ hr{
     margin: 20px auto;
 }
 
+p{
+    line-height: 21.82px;
+    padding: 0 10px;
+}
+
+.section-title{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
 /* 3. Header */
 .intro{
     font-weight: bold;
@@ -71,14 +87,54 @@ hr{
     padding: 25px 0;
 }
 
-/**********************************/
-/* 4. Quem somos
-/**********************************/
+/* 4. Quem somos */
+.somos{
+    max-width: 960px;
+    margin: 0 auto;
+}
 
-/**********************************/
-/* 5. Nossos cursos
-/**********************************/
+.somos-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
 
+/*grow, shrink, basis*/
+.somos-content{
+    flex: 6 1 160px;
+}
+
+.somos-img{
+    flex: 1 1 350px;
+}
+
+/* 5. Nossos cursos*/
+.cursos{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.cursos-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.curso{
+    width: 280px;
+    margin: 0 20px;
+}
+
+.curso p{
+    text-align: justify;
+}
+
+.curso-title{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+}
 /**********************************/
 /* 6. Planos
 /**********************************/
