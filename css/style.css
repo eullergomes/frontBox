@@ -220,6 +220,7 @@ img{
 }
 
 /*seleciona o último filho do pai*/
+/*Também poderia usar class ou id*/
 .plano:last-child{
     background-color: var(--clr-green-light);
 }
@@ -241,13 +242,55 @@ img{
     }
 }
 
-/**********************************/
-/* 7. Vantagens
-/**********************************/
+/* 7. Vantagens */
+.vantagens{
+    max-width: 960px;
+    margin: 0 auto;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
-/**********************************/
-/* 8. Newsletter
-/**********************************/
+.vantagem{
+    max-width: 240px;
+    margin: 10px;
+}
+
+.vantagem-title{
+    font-size: 1.7rem;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.vantagem-title::before{
+    content: "";
+    width: 10px;
+    height: 25px;
+    background-color: var(--clr-green-dark);
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/*Também poderia usar class para mudar a cor*/
+.vantagem:nth-of-type(3n+1) .vantagem-title::before{
+    background-color: var(--clr-green-light);
+}
+
+.vantagem:nth-of-type(3n+2) .vantagem-title::before{
+    background-color: var(--clr-pink-dark);
+}
+
+.vantagem:nth-of-type(3n+3) .vantagem-title::before{
+    background-color: var(--clr-green-dark);
+}
+
+@media (max-width: 800px) {
+    .vantagem{
+        max-width: 220px;
+    }
+}
+
+/* 8. Newsletter */
 
 /**********************************/
 /* 9. Footer
