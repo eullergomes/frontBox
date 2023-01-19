@@ -135,9 +135,111 @@ img{
     margin: 10px 0 5px 0;
     font-weight: bold;
 }
-/**********************************/
-/* 6. Planos
-/**********************************/
+
+/* 6. Planos*/
+.planos{
+    background-color: var(--clr-pink-light);
+}
+
+.planos-container{
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.plano{
+    width: 290px;
+    margin: 10px;
+    border: 2px solid var(--clr-green-light);
+}
+
+.plano-title{
+    font-size: 2.7rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.plano-preco{
+    font-size: 3rem;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.plano-preco sup{
+    position: relative;
+    font-size: 1.5rem;
+    top: -20px;
+}
+
+.plano-divisor{
+    background-color: var(--clr-green-light);
+    width: 20px;
+    margin: 5px auto;
+}
+
+.plano-lista{
+    max-width: 195px;
+    margin: 0 auto;
+}
+
+.plano-lista-item{
+    margin: 10px 0;
+    font-style: italic;
+    /* list-style-type: disc; */
+    display: flex;
+    align-items: center;
+}
+
+/*poderia usar um "list-style-type: disc" e tentar mudar a cor*/
+.plano-lista-item::before{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: var(--clr-green-light);
+    margin-right: 5px;
+    border-radius: 5px;
+
+}
+
+.plano-btn{
+    display: block;
+    max-width: 180px;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 15px auto;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid var(--clr-green-light);
+}
+
+/*seleciona o último filho do pai*/
+.plano:last-child{
+    background-color: var(--clr-green-light);
+}
+
+.plano:last-child, .plano:last-child  .plano-btn{
+    border-color: var(--clr-pink-dark);
+}
+
+.plano:last-child .plano-lista-item::before, .plano:last-child .plano-divisor{
+    background-color: #E10BF9;
+}
+
+@media (max-width: 800px){
+    .plano:nth-child(3){
+        order: -2;
+    }
+    .plano:nth-child(2){
+        order: -1;
+    }
+}
 
 /**********************************/
 /* 7. Vantagens
