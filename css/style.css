@@ -17,6 +17,10 @@
 }
 
 /*Estilos gerais*/
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: var(--clr-white);
     font-family: var(--ff-primary);
@@ -352,6 +356,17 @@ img{
 
 }
 
-/**********************************/
-/* 9. Footer
-/**********************************/
+
+/* 9. Footer */
+footer{
+    background-color: var(--clr-pink-light);
+}
+
+.footer-container{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
