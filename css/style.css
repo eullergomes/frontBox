@@ -17,6 +17,10 @@
 }
 
 /*Estilos gerais*/
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: var(--clr-white);
     font-family: var(--ff-primary);
@@ -27,7 +31,7 @@ a, a:hover a:active, a:link, a:visited{
     color: black;
 }
 
-/* Menu */
+/* 1. Menu */
 .menu-bg{
     background-color: var(--clr-green-light);
 }
@@ -39,6 +43,7 @@ a, a:hover a:active, a:link, a:visited{
     max-width: 960px;
     margin: 0 auto;
     flex-wrap: wrap;
+    padding: 10px 0;
 }
 
 .logo{
@@ -51,7 +56,15 @@ a, a:hover a:active, a:link, a:visited{
 }
 
 .nav-link{
+    /* padding-top: 5px; */
+    /* padding-bottom: 5px; */
     padding: 20px 10px;
+    /* font-size: 1.1rem; */
+}
+
+.nav-link:hover{
+    /* border-bottom: 2px solid var(--clr-pink-dark); */
+    color: #e601ff;
 }
 
 hr{
@@ -153,7 +166,7 @@ img{
 .plano{
     width: 290px;
     margin: 10px;
-    border: 2px solid var(--clr-green-light);
+    border: 2px solid #23ae5a;
 }
 
 .plano-title{
@@ -177,7 +190,7 @@ img{
 }
 
 .plano-divisor{
-    background-color: var(--clr-green-light);
+    background-color: var(--clr-green-dark);
     width: 20px;
     margin: 5px auto;
 }
@@ -201,7 +214,7 @@ img{
     display: block;
     width: 5px;
     height: 5px;
-    background-color: var(--clr-green-light);
+    background-color: #23ae5a;
     margin-right: 5px;
     border-radius: 5px;
 
@@ -216,10 +229,15 @@ img{
     padding: 10px;
     text-align: center;
     text-transform: uppercase;
-    border: 2px solid var(--clr-green-light);
+    border: 2px solid #23ae5a;
+}
+
+.plano-btn:hover{
+    background-color: var(--clr-pink-dark);
 }
 
 /*seleciona o último filho do pai*/
+/*Também poderia usar class ou id*/
 .plano:last-child{
     background-color: var(--clr-green-light);
 }
@@ -241,14 +259,138 @@ img{
     }
 }
 
-/**********************************/
-/* 7. Vantagens
-/**********************************/
+/* 7. Vantagens */
+.vantagens{
+    max-width: 960px;
+    margin: 0 auto;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
-/**********************************/
-/* 8. Newsletter
-/**********************************/
+.vantagem{
+    max-width: 240px;
+    margin: 10px;
+}
 
-/**********************************/
-/* 9. Footer
-/**********************************/
+.vantagem-title{
+    font-size: 1.7rem;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.vantagem-title::before{
+    content: "";
+    width: 10px;
+    height: 25px;
+    background-color: var(--clr-green-dark);
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/*Também poderia usar class para mudar a cor*/
+.vantagem:nth-of-type(3n+1) .vantagem-title::before{
+    background-color: var(--clr-green-light);
+}
+
+.vantagem:nth-of-type(3n+2) .vantagem-title::before{
+    background-color: var(--clr-pink-dark);
+}
+
+.vantagem:nth-of-type(3n+3) .vantagem-title::before{
+    background-color: var(--clr-green-dark);
+}
+
+@media (max-width: 800px) {
+    .vantagem{
+        max-width: 220px;
+    }
+}
+
+/* 8. Newsletter */
+.newsletter {
+    background-color: var(--clr-green-light);
+}
+
+.newsletter-container{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newsletter-info{
+    padding: 10px;
+    flex: 1 1 260px;
+}
+
+.newsletter-title{
+    font-size: 2.62rem;
+    font-weight: bold;
+}
+
+.newsletter-desc{
+    font-style: italic;
+}
+
+.newsletter-form{
+    flex: 2 1 260px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newsletter-input{
+    flex: 3 1 260px;
+    font: 1.25rem;
+    width: 325px;
+    color: black;
+    font-style: italic;
+    font-family: var(--ff-primary);
+    border: 10px solid var(--clr-pink-dark);
+    padding: 10px;
+    margin: 0;
+    border-radius: 0px;
+}
+
+.newsletter-submit{
+    flex: 1 1 260px;
+    width: 192px;
+    font-family: var(--ff-primary);
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--clr-pink-dark);
+    color: black;
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+}
+
+
+/* 9. Footer */
+footer{
+    background-color: var(--clr-pink-light);
+}
+
+.footer-container{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-content img:hover{
+    cursor: pointer;
+}
+
+/* @media (max-width: 600px){
+    .newsletter-container{
+        max-width: 240px;
+    }
+    .newsletter-form{
+        flex-flow: column;
+    }
+} */
