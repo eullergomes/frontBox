@@ -43,6 +43,7 @@ a, a:hover a:active, a:link, a:visited{
     max-width: 960px;
     margin: 0 auto;
     flex-wrap: wrap;
+    padding: 10px 0;
 }
 
 .logo{
@@ -319,9 +320,8 @@ img{
     flex-wrap: wrap;
 }
 
-/*grow, shrink, basis*/
 .newsletter-info{
-    padding-left: 10px;
+    padding: 10px;
     flex: 1 1 260px;
 }
 
@@ -337,25 +337,25 @@ img{
 .newsletter-form{
     flex: 2 1 260px;
     display: flex;
-    
+    flex-wrap: wrap;
 }
 
-.newsletter-form-input{
+.newsletter-input{
     flex: 3 1 260px;
-    font-size: 1.25rem;
+    font: 1.25rem;
     width: 325px;
     color: black;
     font-style: italic;
     font-family: var(--ff-primary);
     border: 10px solid var(--clr-pink-dark);
-    margin: 0;
     padding: 10px;
+    margin: 0;
     border-radius: 0px;
 }
 
-.newsletter-form-submit{
+.newsletter-submit{
     flex: 1 1 260px;
-    width: 190px;
+    width: 192px;
     font-family: var(--ff-primary);
     font-size: 2.25rem;
     font-weight: bold;
@@ -365,7 +365,6 @@ img{
     cursor: pointer;
     border: none;
     padding: 15px;
-
 }
 
 
