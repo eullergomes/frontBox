@@ -31,7 +31,7 @@ a, a:hover a:active, a:link, a:visited{
     color: black;
 }
 
-/* Menu */
+/* 1. Menu */
 .menu-bg{
     background-color: var(--clr-green-light);
 }
@@ -55,7 +55,15 @@ a, a:hover a:active, a:link, a:visited{
 }
 
 .nav-link{
+    /* padding-top: 5px; */
+    /* padding-bottom: 5px; */
     padding: 20px 10px;
+    /* font-size: 1.1rem; */
+}
+
+.nav-link:hover{
+    /* border-bottom: 2px solid var(--clr-pink-dark); */
+    color: #e601ff;
 }
 
 hr{
@@ -157,7 +165,7 @@ img{
 .plano{
     width: 290px;
     margin: 10px;
-    border: 2px solid var(--clr-green-light);
+    border: 2px solid #23ae5a;
 }
 
 .plano-title{
@@ -181,7 +189,7 @@ img{
 }
 
 .plano-divisor{
-    background-color: var(--clr-green-light);
+    background-color: var(--clr-green-dark);
     width: 20px;
     margin: 5px auto;
 }
@@ -205,7 +213,7 @@ img{
     display: block;
     width: 5px;
     height: 5px;
-    background-color: var(--clr-green-light);
+    background-color: #23ae5a;
     margin-right: 5px;
     border-radius: 5px;
 
@@ -220,7 +228,11 @@ img{
     padding: 10px;
     text-align: center;
     text-transform: uppercase;
-    border: 2px solid var(--clr-green-light);
+    border: 2px solid #23ae5a;
+}
+
+.plano-btn:hover{
+    background-color: var(--clr-pink-dark);
 }
 
 /*seleciona o último filho do pai*/
@@ -370,3 +382,16 @@ footer{
     align-items: center;
     justify-content: space-between;
 }
+
+.footer-content img:hover{
+    cursor: pointer;
+}
+
+/* @media (max-width: 600px){
+    .newsletter-container{
+        max-width: 240px;
+    }
+    .newsletter-form{
+        flex-flow: column;
+    }
+} */
